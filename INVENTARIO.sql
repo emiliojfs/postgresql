@@ -306,6 +306,14 @@ select * from detalleentrada ORDER BY producto_id;
 select * from detalleentrada ORDER BY producto_id DESC;
 select * from detalleentrada ORDER BY producto_id ASC, detalleentrada_cantidad DESC;
 
+SELECT producto_id, COUNT(*) as cantidad FROM detalleentrada GROUP BY producto_id; -- Agrupar por producto_id y contar la cantidad de registros por producto_id
+SELECT producto_id, COUNT(*) as cantidad FROM detalleentrada GROUP BY producto_id HAVING COUNT(*) > 2; -- Agrupar por producto_id y contar la cantidad de registros por producto_id, filtrar por cantidad de registros
+
+
+SELECT * FROM detalleentrada LIMIT 5;
+SELECT * FROM detalleentrada LIMIT 5 ORDER BY producto_id DESC;
+SELECT * FROM detalleentrada LIMIT 5 OFFSET 5; -- OFFSET 5, indica que se salte los primeros 5 registros y muestre los siguientes 5
+
 
 --Delete (elimina registros de toda la tabla)
 
