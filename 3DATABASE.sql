@@ -1,0 +1,1 @@
+CREATE DATABASE inventario OWNER admin TABLESPACE tbls_proyectos;

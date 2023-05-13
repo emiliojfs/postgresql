@@ -1,0 +1,1 @@
+CREATE TABLESPACE tbls_laboratorios LOCATION 'D:\WORKSPACE\tablespace\laboratorios';

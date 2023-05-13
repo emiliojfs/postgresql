@@ -1,0 +1,6 @@
+--DDL Lenguaje de definicion de datos
+    --create, alter, drop, truncate, rename
+--DML Lenguaje de manipulacion de datos
+    --insert, update, delete
+--DCL Lenguaje de control de datos
+    --grant, revoke
