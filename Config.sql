@@ -1,5 +1,7 @@
+--azure
+--concomtic
 --Port 5432
---User: postgres
+--User: admin_server
 --Password: ******
 
 --Crear Backup
