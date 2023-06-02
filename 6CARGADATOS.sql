@@ -1,5 +1,5 @@
 
-INSERT INTO Usuario (usuario_nombre, usuario_apellido, usuario_cedula, usuario_direccion, usuario_telefono, usuario_email, usuario_password, usuario_estado)
+INSERT INTO inventario.Usuario (usuario_nombre, usuario_apellido, usuario_cedula, usuario_direccion, usuario_telefono, usuario_email, usuario_password, usuario_estado)
 VALUES 
 ('Oscar', 'Usuario 1', '1234567890', 'Direccion 1', '1234567890', '1@1','1',true),
 ('Dangelo', 'Usuario 2', '1234567890', 'Direccion 2', '1234567890', '2@2','2',true),
@@ -7,7 +7,7 @@ VALUES
 ('Juan', 'Usuario 4', '1234567890', 'Direccion 4', '1234567890', '4@4','4',true),
 ('Pedro', 'Usuario 5', '1234567890', 'Direccion 5', '1234567890', '5@5','5',true);
 
-INSERT INTO Cliente (cliente_nombre, cliente_apellido, cliente_cedula, cliente_direccion, cliente_telefono, cliente_email, cliente_estado)
+INSERT INTO inventario.Cliente (cliente_nombre, cliente_apellido, cliente_cedula, cliente_direccion, cliente_telefono, cliente_email, cliente_estado)
 VALUES
 ('Pia', 'Cliente1', '1234567890', 'Direccion 1', '1234567890', '1@1', true),
 ('Milagros', 'Cliente2', '1234567890', 'Direccion 2', '1234567890', '2@2', true),
@@ -15,7 +15,7 @@ VALUES
 ('Matias', 'Cliente4', '1234567890', 'Direccion 4', '1234567890', '4@4', true),
 ('Macarena', 'Cliente5', '1234567890', 'Direccion 5', '1234567890', '5@5', true);
 
-INSERT INTO Proveedor (proveedor_nombre, proveedor_descripcion, proveedor_estado)
+INSERT INTO inventario.Proveedor (proveedor_nombre, proveedor_descripcion, proveedor_estado)
 VALUES
 ('FNL', 'Proveedor 1', true),
 ('AURAVITALIS', 'Proveedor 2', true),
@@ -23,19 +23,19 @@ VALUES
 ('KNOP', 'Proveedor 4', true),
 ('SIENA', 'Proveedor 5', true);
 
-INSERT INTO Bodega (bodega_nombre, bodega_descripcion, bodega_estado) VALUES ('Batuco-1', 'Bodega 1', true);
-INSERT INTO Bodega (bodega_nombre, bodega_descripcion, bodega_estado) VALUES ('Batuco-2', 'Bodega 2', true);
-INSERT INTO Bodega (bodega_nombre, bodega_descripcion, bodega_estado) VALUES ('SanAlfonso', 'Bodega 3', true);
-INSERT INTO Bodega (bodega_nombre, bodega_descripcion, bodega_estado) VALUES ('Tucapel', 'Bodega 4', true);
-INSERT INTO Bodega (bodega_nombre, bodega_descripcion, bodega_estado) VALUES ('Vega', 'Bodega 5', true);
+INSERT INTO inventario.Bodega (bodega_nombre, bodega_descripcion, bodega_estado) VALUES ('Batuco-1', 'Bodega 1', true);
+INSERT INTO inventario.Bodega (bodega_nombre, bodega_descripcion, bodega_estado) VALUES ('Batuco-2', 'Bodega 2', true);
+INSERT INTO inventario.Bodega (bodega_nombre, bodega_descripcion, bodega_estado) VALUES ('SanAlfonso', 'Bodega 3', true);
+INSERT INTO inventario.Bodega (bodega_nombre, bodega_descripcion, bodega_estado) VALUES ('Tucapel', 'Bodega 4', true);
+INSERT INTO inventario.Bodega (bodega_nombre, bodega_descripcion, bodega_estado) VALUES ('Vega', 'Bodega 5', true);
 
-INSERT INTO Categoria (categoria_nombre, categoria_descripcion) VALUES ('Categoria 1', 'Categoria 1');
-INSERT INTO Categoria (categoria_nombre, categoria_descripcion) VALUES ('Categoria 2', 'Categoria 2');
-INSERT INTO Categoria (categoria_nombre, categoria_descripcion) VALUES ('Categoria 3', 'Categoria 3');
-INSERT INTO Categoria (categoria_nombre, categoria_descripcion) VALUES ('Categoria 4', 'Categoria 4');
-INSERT INTO Categoria (categoria_nombre, categoria_descripcion) VALUES ('Categoria 5', 'Categoria 5');
+INSERT INTO inventario.Categoria (categoria_nombre, categoria_descripcion) VALUES ('Categoria 1', 'Categoria 1');
+INSERT INTO inventario.Categoria (categoria_nombre, categoria_descripcion) VALUES ('Categoria 2', 'Categoria 2');
+INSERT INTO inventario.Categoria (categoria_nombre, categoria_descripcion) VALUES ('Categoria 3', 'Categoria 3');
+INSERT INTO inventario.Categoria (categoria_nombre, categoria_descripcion) VALUES ('Categoria 4', 'Categoria 4');
+INSERT INTO inventario.Categoria (categoria_nombre, categoria_descripcion) VALUES ('Categoria 5', 'Categoria 5');
 
-INSERT INTO Producto (categoria_id, proveedor_id, producto_nombre, producto_descripcion, producto_stockActual, producto_stockMinimo, producto_stockMaximo, producto_fechaVencimiento, producto_estado)
+INSERT INTO inventario.Producto (categoria_id, proveedor_id, producto_nombre, producto_descripcion, producto_stockActual, producto_stockMinimo, producto_stockMaximo, producto_fechaVencimiento, producto_estado)
 VALUES 
 (1, 2, 'Capsula Incagold Moringa', 'Capsula Incagold Moringa', 10, 5, 15, '2020-01-01', true),
 (1, 2, 'Capsula Incagold Curcuma', 'Capsula Incagold Curcuma', 10, 5, 15, '2020-01-01', true),
@@ -67,13 +67,13 @@ VALUES
 (5,3,'Jabon de Acai','Jabon de Acai',10,5,15,'2020-01-01',true),
 (5,3,'Jabon de Ajo','Jabon de Ajo',10,5,15,'2020-01-01',true);
 
-INSERT INTO DocumentoEntrada (documentoEntrada_fecha, usuario_id, bodega_id, proveedor_id) VALUES ('2020-01-01', 1, 1, 1);
-INSERT INTO DocumentoEntrada (documentoEntrada_fecha, usuario_id, bodega_id, proveedor_id) VALUES ('2020-01-01', 1, 2, 3);
-INSERT INTO DocumentoEntrada (documentoEntrada_fecha, usuario_id, bodega_id, proveedor_id) VALUES ('2020-01-01', 1, 2, 5);
-INSERT INTO DocumentoEntrada (documentoEntrada_fecha, usuario_id, bodega_id, proveedor_id) VALUES ('2020-01-01', 2, 3, 3);
-INSERT INTO DocumentoEntrada (documentoEntrada_fecha, usuario_id, bodega_id, proveedor_id) VALUES ('2020-01-01', 2, 3, 5);
+INSERT INTO inventario.DocumentoEntrada (documentoEntrada_fecha, usuario_id, bodega_id, proveedor_id) VALUES ('2020-01-01', 1, 1, 1);
+INSERT INTO inventario.DocumentoEntrada (documentoEntrada_fecha, usuario_id, bodega_id, proveedor_id) VALUES ('2020-01-01', 1, 2, 3);
+INSERT INTO inventario.DocumentoEntrada (documentoEntrada_fecha, usuario_id, bodega_id, proveedor_id) VALUES ('2020-01-01', 1, 2, 5);
+INSERT INTO inventario.DocumentoEntrada (documentoEntrada_fecha, usuario_id, bodega_id, proveedor_id) VALUES ('2020-01-01', 2, 3, 3);
+INSERT INTO inventario.DocumentoEntrada (documentoEntrada_fecha, usuario_id, bodega_id, proveedor_id) VALUES ('2020-01-01', 2, 3, 5);
 
-INSERT INTO DetalleEntrada (detalleEntrada_cantidad, producto_id, documentoEntrada_id)
+INSERT INTO inventario.DetalleEntrada (detalleEntrada_cantidad, producto_id, documentoEntrada_id)
 VALUES 
 (100, 1, 1),
 (300, 2, 1),
@@ -105,13 +105,13 @@ VALUES
 (100, 12, 5),
 (220, 11, 5);
 
-INSERT INTO DocumentoSalida (documentoSalida_fecha, usuario_id, bodega_id, cliente_id) VALUES ('2020-01-01', 1, 1, 1);
-INSERT INTO DocumentoSalida (documentoSalida_fecha, usuario_id, bodega_id, cliente_id) VALUES ('2020-01-01', 2, 2, 3);
-INSERT INTO DocumentoSalida (documentoSalida_fecha, usuario_id, bodega_id, cliente_id) VALUES ('2020-01-01', 2, 2, 3);
-INSERT INTO DocumentoSalida (documentoSalida_fecha, usuario_id, bodega_id, cliente_id) VALUES ('2020-01-01', 3, 2, 2);
-INSERT INTO DocumentoSalida (documentoSalida_fecha, usuario_id, bodega_id, cliente_id) VALUES ('2020-01-01', 3, 3, 4);
+INSERT INTO inventario.DocumentoSalida (documentoSalida_fecha, usuario_id, bodega_id, cliente_id) VALUES ('2020-01-01', 1, 1, 1);
+INSERT INTO inventario.DocumentoSalida (documentoSalida_fecha, usuario_id, bodega_id, cliente_id) VALUES ('2020-01-01', 2, 2, 3);
+INSERT INTO inventario.DocumentoSalida (documentoSalida_fecha, usuario_id, bodega_id, cliente_id) VALUES ('2020-01-01', 2, 2, 3);
+INSERT INTO inventario.DocumentoSalida (documentoSalida_fecha, usuario_id, bodega_id, cliente_id) VALUES ('2020-01-01', 3, 2, 2);
+INSERT INTO inventario.DocumentoSalida (documentoSalida_fecha, usuario_id, bodega_id, cliente_id) VALUES ('2020-01-01', 3, 3, 4);
 
-INSERT INTO DetalleSalida (detalleSalida_cantidad, producto_id, documentoSalida_id)
+INSERT INTO inventario.DetalleSalida (detalleSalida_cantidad, producto_id, documentoSalida_id)
 VALUES
 (10, 1, 1),
 (30, 2, 1),
@@ -146,22 +146,36 @@ VALUES
 
 --Update (actualiza registros de toda la tabla)
 
-UPDATE Categoria SET categoria_nombre = 'Capsulas' WHERE categoria_id = 1;
-UPDATE Categoria SET categoria_nombre = 'Harinas' WHERE categoria_id = 2;
-UPDATE Categoria SET categoria_nombre = 'Aceites' WHERE categoria_id = 3;
-UPDATE Categoria SET categoria_nombre = 'Cremas' WHERE categoria_id = 4;
-UPDATE Categoria SET categoria_nombre = 'Jabones' WHERE categoria_id = 5;
+UPDATE inventario.Categoria SET categoria_nombre = 'Capsulas' WHERE categoria_id = 1;
+UPDATE inventario.Categoria SET categoria_nombre = 'Harinas' WHERE categoria_id = 2;
+UPDATE inventario.Categoria SET categoria_nombre = 'Aceites' WHERE categoria_id = 3;
+UPDATE inventario.Categoria SET categoria_nombre = 'Cremas' WHERE categoria_id = 4;
+UPDATE inventario.Categoria SET categoria_nombre = 'Jabones' WHERE categoria_id = 5;
 
 --Delete (elimina registros de toda la tabla)
 
-DELETE FROM Producto;
-DELETE FROM DocumentoEntrada;
-DELETE FROM DetalleEntrada;
-DELETE FROM DocumentoSalida;
-DELETE FROM DetalleSalida;
+DELETE FROM inventario.Producto;
+DELETE FROM inventario.DocumentoEntrada;
+DELETE FROM inventario.DetalleEntrada;
+DELETE FROM inventario.DocumentoSalida;
+DELETE FROM inventario.DetalleSalida;
 
-DELETE FROM Usuario;
-DELETE FROM Cliente;
-DELETE FROM Proveedor;
-DELETE FROM Bodega;
-DELETE FROM Categoria;
+DELETE FROM inventario.Usuario;
+DELETE FROM inventario.Cliente;
+DELETE FROM inventario.Proveedor;
+DELETE FROM inventario.Bodega;
+DELETE FROM inventario.Categoria;
+
+
+--Reset SEQUENCE
+
+TRUNCATE TABLE inventario.Usuario RESTART IDENTITY CASCADE;
+TRUNCATE TABLE inventario.Producto RESTART IDENTITY CASCADE;
+TRUNCATE TABLE inventario.DocumentoEntrada RESTART IDENTITY CASCADE;
+TRUNCATE TABLE inventario.DetalleEntrada RESTART IDENTITY CASCADE;
+TRUNCATE TABLE inventario.DocumentoSalida RESTART IDENTITY CASCADE;
+TRUNCATE TABLE inventario.DetalleSalida RESTART IDENTITY CASCADE;
+TRUNCATE TABLE inventario.Cliente RESTART IDENTITY CASCADE;
+TRUNCATE TABLE inventario.Proveedor RESTART IDENTITY CASCADE;
+TRUNCATE TABLE inventario.Bodega RESTART IDENTITY CASCADE;
+TRUNCATE TABLE inventario.Categoria RESTART IDENTITY CASCADE;
